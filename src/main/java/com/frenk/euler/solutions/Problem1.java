@@ -40,7 +40,6 @@ public class Problem1 {
         long startTime = System.nanoTime();
         System.out.println(new Solver(new int[] { 3, 5 }, 1000).solve());
         long endTime = System.nanoTime();
-        System.out.println(String.format("Total runtime: %f ms", 1.0/1000000 * (endTime - startTime)));
-
+        System.out.println(String.format("Total runtime: %f ms", 1.0/1_000_000 * (endTime - startTime)));
     }
 }
