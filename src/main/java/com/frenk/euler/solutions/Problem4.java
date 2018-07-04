@@ -68,7 +68,7 @@ public class Problem4 {
     // testSolver.testCheckIsPalindrome(9909, false);
 
     // System.out.println(new Solver(2).solve()); // should be 9009
-//     System.out.println(new Solver(3).solve());
+    // System.out.println(new Solver(3).solve());
 
     long startTime = System.nanoTime();
     new Solver(3).solve();
