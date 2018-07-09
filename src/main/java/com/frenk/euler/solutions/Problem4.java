@@ -56,7 +56,6 @@ public class Problem4 {
       if (result != expected) {
         throw new AssertionError("expected checkIsPalindrome(" + num + ") to be " + expected + " but got " + result);
       }
-      assert checkIsPalindrome(num) == expected;
     }
   }
 

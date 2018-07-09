@@ -25,21 +25,42 @@ public class Problem6 {
     }
 
     private int sumSquares(int n) {
-      return IntStream.rangeClosed(1, n).map(i -> i*i).sum();
+      // return IntStream.rangeClosed(1, n).map(i -> i*i).sum();
+      return (2 * limit + 1) * (limit + 1) * limit / 6;
     }
 
     private int squareSum(int n) {
-      int sum = IntStream.rangeClosed(1, n).sum();
+//     int sum = IntStream.rangeClosed(1, n).sum();
+      int sum = (n * (n + 1)) / 2;
       return sum * sum;
+    }
+
+
+    public void testSumSquares() {
+      int expected = 385;
+      int result = sumSquares(10);
+      if (result != expected) {
+        throw new AssertionError("expected sumSquares(" + 10 + ") to be " + expected + " but got " + result);
+      }
+    }
+
+    public void testSquareSum() {
+      int expected = 3025;
+      int result = squareSum(10);
+      if (result != expected) {
+        throw new AssertionError("expected squareSum(" + 10 + ") to be " + expected + " but got " + result);
+      }
     }
 
   }
 
   public static void main(String[] args) {
 
-//    System.out.println(new Solver(10).solve()); // should be 385
+//    System.out.println(new Solver(10).solve()); // should be 2640
 //     System.out.println(new Solver(100).solve());
-    
+      // new Solver(10).testSumSquares();
+//     new Solver(10).testSquareSum();
+
      long startTime = System.nanoTime();
      new Solver(100).solve();
      long endTime = System.nanoTime();
